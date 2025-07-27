@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <title>I Who Quietly Trace The Words</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <!-- *FONT LINKS* -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manufacturing+Consent&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    </head>
+<body>
+<div id="wrapper">
+
+   <script>
+    
+   </script>
+    <!-- GSAP -->
+     <script src="gsap.min.js"></script>
+    <script src="Draggable.min.js"></script>
+    <script src="InertiaPlugin.min.js"></script>
+    <script src="ScrollTrigger.min.js"></script>
+    <script src="ScrambleTextPlugin.min.js"></script>
+    
+
+
+
+    <!-- <svg id="eye1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 567.57 312.68">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ff0000;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer_1">
+    <path class="cls-1" d="M390.79-44.32h93.66V49.33c0,169.81-137.86,307.68-307.68,307.68h-93.66v-93.66c0-169.81,137.86-307.68,307.68-307.68Z" transform="translate(193.67 -154.88) rotate(45)"/>
+  </g>
+</svg> -->
+
+<svg id="eye1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 658.1 636.18">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ff0000;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer_1">
+    <path class="cls-1" d="M468.83,24.15h102.5v102.5c0,174.68-141.82,316.5-316.5,316.5h-102.5v-102.5c0-174.68,141.82-316.5,316.5-316.5Z" transform="translate(271.2 -187.41) rotate(45)"/>
+    <path class="cls-1" d="M450.78,83.74s-61.09-144.94-213.64-53.45C84.6,121.78,0,13.11,0,13.11c0,0,85.13,135.96,307.3,40.39,48.02-20.66,103.84-10.17,140.46,27.12,1,1.02,2.01,2.06,3.02,3.12Z"/>
+    <path class="cls-1" d="M208.51,636.18s-43.12-199.14,186.71-215.7c229.83-16.56,238.63-194.74,238.63-194.74,0,0,10.95,207.52-295.73,271.57-66.28,13.84-117.66,66.51-128.73,133.31-.3,1.82-.6,3.68-.88,5.55Z"/>
+    <circle class="cls-1" cx="552.6" cy="95.77" r="22"/>
+    <circle class="cls-1" cx="31.27" cy="233.65" r="22"/>
+    <circle class="cls-1" cx="609.49" cy="140.22" r="22"/>
+  </g>
+</svg>
+
+<!-- <svg id="eye2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 567.57 312.68">
+  <defs>
+    <style>
+      .cls-2 {
+        fill: #e5ff00;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer_1">
+    <path class="cls-2" d="M390.79-44.32h93.66V49.33c0,169.81-137.86,307.68-307.68,307.68h-93.66v-93.66c0-169.81,137.86-307.68,307.68-307.68Z" transform="translate(193.67 -154.88) rotate(45)"/>
+  </g>
+</svg> -->
+<svg id="eye2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 613.58 717.88">
+  <defs>
+    <style>
+      .cls-2 {
+        fill: #e5ff00;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer_1">
+    <path class="cls-2" d="M95.53,158.15h102.5c174.68,0,316.5,141.82,316.5,316.5v102.5h-102.5c-174.68,0-316.5-141.82-316.5-316.5v-102.5h0Z" transform="translate(780.69 411.93) rotate(135)"/>
+    <path class="cls-2" d="M7.36,355.54s-52.32-148.33,122.09-183.28C303.86,137.32,293.33,0,293.33,0c0,0,28.49,157.87-200.17,236.63-49.42,17.02-83.67,62.34-85.67,114.57-.05,1.43-.1,2.87-.14,4.34Z"/>
+    <path class="cls-2" d="M403.39,717.88s79.48-157.14-101.93-117.75c-181.41,39.39-148.45-90.57-148.45-90.57,0,0-55.45,156.11,177.18,134.62,50.28-4.64,79.83,22.8,73.74,69.78-.17,1.28-.35,2.59-.54,3.91Z"/>
+    <circle class="cls-2" cx="472.03" cy="509.57" r="10.47"/>
+    <circle class="cls-2" cx="591.58" cy="432.32" r="22"/>
+    <circle class="cls-2" cx="335.36" cy="29.22" r="22"/>
+  </g>
+</svg>
+<script>
+
+        gsap.registerPlugin(Draggable) 
+            Draggable.create("#eye1", {
+                    type: "xy",
+                    inertia: false,
+                        edgeResistance: 0.65,
+                    // bounds: {top: 100, left: 0, width: 2560, height: 98000},
+                    onPress: function() {
+                        gsap.to(this.target, { scale: 4, duration: 0.4, rotation: 0, ease: "bounce" });
+                    },
+                    onRelease: function() {
+                        gsap.to(this.target, { scale: 1, duration: 0.4, rotation: 0, ease: "bounce" });
+                    }
+                    });
+
+                    gsap.registerPlugin(Draggable) 
+            Draggable.create("#eye2", {
+                    type: "xy",
+                    inertia: false,
+                        edgeResistance: 0.65,
+                    // bounds: {top: 100, left: 0, width: 2560, height: 98000},
+                    onPress: function() {
+                        gsap.to(this.target, { scale: 4, duration: 0.4, rotation: 0, ease: "bounce" });
+                    },
+                    onRelease: function() {
+                        gsap.to(this.target, { scale: 1, duration: 0.4, rotation: 0, ease: "bounce" });
+                    }
+                    });
+    </script>
+
+
+
+<div id="title">
+
+    <audio id="BGmusic" src="media/221222-meditation-psychedelic-dark-world-spiritual-155651.mp3" preload="auto" loop></audio>
+    <img src="media/title.gif" alt="I Who Quietly Trace The Words" class="gif" id="titlegif" />
+    <p class="_48 MS stroked" id="mute">Mute</p>
+    <p class="_48 MS stroked" id="unmute">Unmute</p>
+<script>
+    document.getElementById('titlegif').addEventListener('mouseenter', function() {
+    const audio = document.getElementById('BGmusic');
+    audio.currentTime = 0;
+    audio.play();
+  });
+
+  //  document.getElementById('mute').addEventListener('click', function() {
+  //   document.querySelectorAll('audio').forEach(function(audio) {
+  //     audio.pause();
+  //     audio.currentTime = 0;
+  //   });
+  //   document.getElementById('mute').style.transition = "transform 0.5s cubic-bezier(.68,-0.55,.27,1.55)";
+  //   document.getElementById('mute').style.transform = "scale(0)";
+  // });
+
+  const muteBtn = document.getElementById('mute');
+const unmuteBtn = document.getElementById('unmute');
+
+unmuteBtn.style.display = 'none'; 
+
+muteBtn.onclick = function() {
+  document.querySelectorAll('audio').forEach(audio => audio.muted = true);
+  muteBtn.style.display = 'none';
+  unmuteBtn.style.display = 'inline-block';
+};
+
+unmuteBtn.onclick = function() {
+  document.querySelectorAll('audio').forEach(audio => audio.muted = false);
+  unmuteBtn.style.display = 'none';
+  muteBtn.style.display = 'inline-block';
+}; 
+
+</script>
+</div>
+<div id="background1"></div>
+<div id="icanfeelthem">
+    
+    <p class="_24 MS white" id="line1"> i can feel them sinking into my chest...</p>
+    <p class="_24 MS white" id="line2"> my waves...</p>
+    <p class="_24 MS white" id="line3"> my ocean...</p>
+    <p class="_24 MS white" id="line3_1"> this pair of eyes, i must hold tightly.<br>&#40;try moving the eyes in the corner&#41;.</p>
+    <img src="media/blueeye3.png" alt="Eyes" class="gif" id="blueeyes1" />
+      <img src="media/blueeye3.png" alt="Eyes" class="gif" id="blueeyes2" />
+
+</div>
+<div id="theysay">
+    <p class="_64 MS blue" id="line4"> They say:</p>
+    <img src="media/bookstackgif.gif" alt="They say:"  id="bookgif" />
+    <p class="_48 TT blue" id="line5">Read</p>
+    <p class="_48 TT blue" id="line6">the</p>
+    <p class="_48 TT blue" id="line7">word,</p>
+    <p class="_48 TT blue" id="line8">child.</p>
+    <div class="bookline" id="bookline1"></div>
+    <div class="bookline" id="bookline2"></div>
+    <div class="bookline" id="bookline3"></div>
+</div>
+
+<script>
+
+  gsap.registerPlugin(ScrambleTextPlugin, ScrollTrigger);
+
+  gsap.to("#line4", {
+    duration: 2,
+    scrambleText: {
+      text: "They say:",
+      chars: "upperAndLowerCase",
+      revealDelay: 0.5,
+      speed: 1,
+    },
+    scrollTrigger: {
+      trigger: "#line4",
+     
+      toggleActions: "restart reverse play reverse"
+    }
+  });
+
+  gsap.from("#bookgif", {
+    duration: 0.5,
+    ease: "bounce",
+    scale: 0,
+    scrollTrigger: {
+      trigger: "#bookgif",
+      start: "top 100%",
+     
+      toggleActions: "restart reverse play reverse"
+    }
+  });
+</script>
+
+<div id="but">
+    <img src="media/ascii-art (8).png" alt="Butterfly" class="gif" id="butgif" />
+    <p class="_48 MS blue" id="line9">But the word..</p>
+    <svg id="butline" xmlns="http://www.w3.org/2000/svg" width="1939" height="1243" viewBox="0 0 1939 1243" fill="none">
+  <path d="M1 1130.4C128.5 992.73 459.5 719.796 763.5 729.396C1143.5 741.396 573.5 958.897 643 807.897C712.5 656.897 1363.5 1063.4 1559.5 581.397C1755.5 99.3969 1179.5 -181.103 866 135.397C552.5 451.897 1334 325.896 1002 192.896C670 59.8965 -68.5 442.896 245 656.896C558.5 870.896 1869.5 -238.104 1933 280.396C1996.5 798.896 1303 1181.9 1279 1024.9C1255 867.896 1490 846.896 1387.5 1024.9C1285 1202.9 806 976.396 914.5 1241.9"/>
+</svg>
+<p class="_32 TT blue" id="line10">slips</p>
+<p class="_32 TT blue" id="line11">off</p>
+<p class="_32 TT blue" id="line12">the</p>
+<p class="_32 TT blue" id="line13">tounge</p>
+<p class="_32 TT blue" id="line14">like</p>
+<p class="_32 TT blue" id="line15">butter</p>
+<p class="_32 TT blue" id="line16">off</p>
+<p class="_32 TT blue" id="line17">glass</p>
+<p class="_32 MS blue" id="line18">no grip,</p>
+<p class="_32 MS blue" id="line19">no anchor.</p>
+<div class="whiteblock" id="wb1"></div>
+<div class="whiteblock" id="wb2"></div>
+<div class="whiteblock" id="wb3"></div>
+<div class="whiteblock" id="wb4"></div>
+<div class="whiteblock" id="wb5"></div>
+<div class="whiteblock" id="wb6"></div>
+<div class="whiteblock" id="wb7"></div>
+<div class="whiteblock" id="wb8"></div>
+<div class="whiteblock" id="wb9"></div>
+<div class="whiteblock" id="wb10"></div>
+<div class="whiteblock" id="wb11"></div>
+<div class="whiteblock" id="wb12"></div>
+<div class="whiteblock" id="wb13"></div>
+<div class="whiteblock" id="wb14"></div>
+<div class="whiteblock" id="wb15"></div>
+<div class="whiteblock" id="wb16"></div>
+<div class="whiteblock" id="wb17"></div>
+<div class="whiteblock" id="wb18"></div>
+
+<script>
+
+gsap.registerPlugin(Draggable) 
+    Draggable.create(".whiteblock", {
+            type: "x",
+            inertia: false,
+                edgeResistance: 0.65,
+            bounds: {top: 100, left: 0, width: 2560, height: 98000},
+            // onPress: function() {
+            //     gsap.to(this.target, { scale: 1, duration: 0.4, rotation: 0, ease: "bounce" });
+            // },
+            // onRelease: function() {
+            //     gsap.to(this.target, { scale: 1, duration: 0.4, rotation: 0, ease: "bounce"});
+            // }
+            });
+
+gsap.registerPlugin(ScrollTrigger)
+gsap.utils.toArray(".whiteblock").forEach(function(block) {
+  gsap.from(block, {
+    duration: 1.25,
+    ease: "easeInOut",
+    scale: 0,
+    scrollTrigger: {
+      trigger: block,
+      start: "top 100%",
+      toggleActions: "restart reverse play reverse"
+    }
+  });
+});
+
+// gsap.from("#line18, #line19", {
+//     duration: 1.25,
+//     ease: "bounce",
+//     scaleX: 20,
+//     filter: "blur(20px)",
+//     scrollTrigger: {
+//       trigger: "#line18, #line19",
+//       start: "top 100%",
+//       toggleActions: "restart reverse play reverse"
+//     }
+//   });
+
+
+
+  
+       
+
+  
+
+
+</script>
+</div>
+
+<div id="dig">
+  
+    <p class="_48 MS blue" id="line20">i dig</p>
+    <p class="_48 MS blue" id="line21">in desperation</p>
+    <p class="_48 MS blue" id="line22">needing a way</p>
+    <p class="_48 MS blue" id="line23">to connect...</p>
+    <p class="_48 MS blue" id="line24">to feel...</p>
+    <p class="_48 MS blue" id="line25">to communicate.</p>
+    <p class="_48 MS blue" id="dug">when will I find my answer?</p>
+  
+      <img src="media/AdobeStock_168909167.png" class="digimg" id="dig1" />
+    <img src="media/AdobeStock_184981017.png" class="digimg" id="dig2" />
+    <img src="media/AdobeStock_49306521.png" class="digimg" id="dig3" />
+    <img src="media/AdobeStock_54729387.png" class="digimg" id="dig4" />
+    <div class="digimgcontainer" id="container1">
+    <img src="media/AdobeStock_788729707.png" class="digimg" id="dig5" />
+    </div>
+    
+    <script>
+
+        gsap.registerPlugin(Draggable) 
+            Draggable.create(".digimg", {
+                    type: "xy",
+                    inertia: true,
+                        edgeResistance: 0.65,
+                    bounds: {top: 100, left: 0, width: 2560, height: 98000},
+                   
+                    onPress: function() {
+                        gsap.to(this.target, { scale: 1.5, duration: 0.4, rotation: 0, ease: "bounce" });
+                    },
+                    onRelease: function() {
+                        gsap.to(this.target, { scale: 1, duration: 0.4, ease: "bounce"});
+                    }
+                    });
+        
+gsap.registerPlugin(ScrollTrigger)
+gsap.utils.toArray("#line20, #line21, #line22, #line23, #line24, #line25").forEach(function(digtext) {
+  gsap.from(digtext, {
+    duration: 1,
+    ease: "easeInOut",
+    letterSpacing: "-1em",
+    opacity: 0,
+    scrollTrigger: {
+      trigger: digtext,
+      start: "top 100%",
+      toggleActions: "restart reverse play reverse"
+    }
+  });
+});
+  
+
+
+</script>
+</div>
+<div id="dyslexia">
+    <img src="media/dyslexia-gif_1.gif" alt="Dyslexia" class="gif" id="dyslexiagif" />
+    <img src="media/atreegif.gif" alt="tree" class="gif" id="treegif" />
+    <p class="_32 TT blue" id="line26">...blurs the world I see, <br> Lines dissolve unpredictably,</p>
+    <img src="media/atreegif.gif" alt="tree" class="gif" id="treegif2" />
+    <div id="gradienttree"></div>
+    <p class="_48 TT white" id="line27">Sharp turns soft</p>
+    <p class="_32 TT blue" id="line28">and forms_________break free</p>
+</div>
+
+<script>
+  gsap.from("#treegif, #treegif2", {
+    
+    
+    
+    filter: "blur(40px)",
+    
+    scrollTrigger: {
+      trigger: "#treegif, #treegif2",
+      start: "top 100%",
+      end: "bottom 80%",
+      toggleActions: "restart reverse play reverse",
+      scrub: 1
+    }
+  });
+</script>
+
+<div id="look">
+  <img src="media/skygif.gif" alt="Sky" class="gif" id="skygif" />
+
+
+  
+  <script>
+    gsap.from("#skygif", {
+    duration: 1.5,
+    ease: "easeInOut",
+    opacity: 0,
+    mixBlendMode: "normal",
+    delay: 1,
+    scrollTrigger: {
+      trigger: "#skygif",
+      start: "top 100%",
+      
+      toggleActions: "restart reverse play reverse"
+    }
+  });
+  </script>
+
+
+    <p class="_32 TT blue" id="line29">Look! They <span class="MS stroked _48">dance</span> </p>
+    <img src="media/Compbpdq.gif" alt="dancing" class="gif" id="dancinggif" />
+    <p class="_48 TT stroked" id="line30">cursive carousel <br><br>
+ rotating like dreams i almost remembered but
+ <br><br>
+
+ <span class="MS blue _64" id="line31">never quite had.</span></p>
+</div>
+<div id="whitegradient"></div>
+<div id="whitegradient2"></div>
+
+<div id="concentrate">
+  <p class="_48 TT white" id="concentrateline1"> And they say:</p>
+  <p class="_48 MS white" id="concentrateline2">"Just concentrate"</p>
+  <img src="media/concentrategif.gif" id="concentrategif">
+  <p class="_48 MS white" id="concentrateline3">Like I didn't already tie my breath</p>
+  <p class="_48 MS white" id="concentrateline4">into knots</p>
+  <p class="_48 MS white" id="concentrateline5">trying.</p>
+</div>
+<div id="shatter">
+    <img src="media/ascii-art (5).png" alt="Shatter" class="gif" id="shattergif" />
+    <!-- <img src="ascii-art (6).png" alt="Shatter" class="gif" id="shattergif2" /> -->
+    <div id="bluebg"></div>
+    <img src="media/shatterimg-01.png" alt="Shatter" class="gif" id="shatterimg" />
+    <p class="_48 MS blue" id="line32">and I am picking up the alphabet <br><br> like...</p>
+    <p class="_48 MS blue" id="line33">shattered glass on linoleum.</p>
+</div>
+<script>gsap.registerPlugin(ScrambleTextPlugin, ScrollTrigger);
+
+  gsap.from("#line32, #line33", {
+    duration: 1.5,
+    scrambleText: {
+      text: "abcdefghijklmnop:",
+      chars: "lowerCase",
+      revealDelay: 0,
+      speed: 1,
+    },
+    scrollTrigger: {
+      trigger: "#line32, #line33",
+     
+      toggleActions: "restart reverse play reverse"
+    }
+  });
+  </script>
+<div id="whitegradient3"></div>
+<div id="time">
+<!-- <img src="Comp 24.gif" id="time1">
+<img src="Comp 24.gif" id="time2"> -->
+<img src="media/clock2gif.gif" id="timegif">
+<img src="media/Comp 2 (0-00-01-12).png" id="clock">
+<p class="_48 MS stroked" id="line34">Clocks melt</p>
+<p class="_48 MS stroked" id="line35">and numbers twist and slide,</p>
+<p class="_48 MS stroked" id="line36">Time plays tricks I cannot guide.</p>
+<p class="_48 MS stroked" id="line37">Thirteen flips to thirty-one, <br><br> Tomorrow hides behind the sun. </p>
+<p class="_48 MS stroked" id="line38">Calendars blur, the months misalign— <br>I chase the days but lose the line.</p>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 186.44 214.84" id="clockhand">
+  <defs>
+    <style>
+      .svg-fill-white {
+        fill: #ffffff;
+        stroke-width: 0px;
+        stroke: #ffffff;
+      }
+
+      .svg-isolation {
+        isolation: isolate;
+      }
+
+      .svg-blend-normal {
+        mix-blend-mode: normal;
+      }
+
+      
+    </style>
+  </defs>
+  <g class="svg-isolation">
+    <g id="Layer_2">
+      <g id="Layer_1-2" data-name="Layer_1">
+        <g class="svg-blend-normal">
+          <path class="svg-fill-white" d="M23.36,51.27c4.17.33,8.44-.37,12.36-2.13,3.24,2.37,6.21,5.08,8.87,8.01.56.58,1.1,1.18,1.61,1.78-2.96,3.91-4.65,8.53-5.02,13.23-.51,6.47,1.44,13.12,5.98,18.45,2.59-2.21,4.63-4.85,6.1-7.7.36,1.86.86,3.62,1.61,5.16,1.05,2.38,2.67,4.29,4.48,6.1,5.48,5.66,11.9,9.79,19.07,13.49,4.82,2.5,9.82,4.86,14.45,7.52,13.63,7.6,23.64,19.31,32.49,31.82,5.8,8.28,12.21,16.02,19.02,23.46,13.4,15.02,26.99,29.9,41.21,44.23.17.18.45.21.65.06.22-.16.26-.48.11-.71-11.92-16.3-24.46-32.05-37.18-47.66-6.26-7.91-12.91-15.46-20.16-22.48-10.95-10.71-20.94-22.44-26.29-37.11-1.91-4.98-3.45-10.3-5.16-15.45-2.52-7.67-5.6-14.65-10.31-20.96-1.51-2.06-3.13-3.98-5.32-5.39-1.42-.99-3.09-1.76-4.89-2.42,3.09-1,6.04-2.61,8.67-4.84-4.54-5.33-10.81-8.3-17.27-8.82-4.74-.37-9.59.58-13.94,2.91-.51-.59-1.01-1.22-1.49-1.86-2.46-3.1-4.68-6.46-6.5-10.01,2.39-3.61,3.77-7.74,4.1-11.94.51-6.46-1.44-13.12-5.98-18.44-1.7,1.45-3.15,3.07-4.37,4.82C34.55-4.96,4.75-5.51.29,17.1c-1.54,9.17,3.24,17.93,11.16,21.85-1.89.91-3.69,2.08-5.36,3.5,4.54,5.32,10.8,8.31,17.27,8.81ZM86.74,97.98c-6.97-.56-13.06-3.88-17.27-8.81-4.21-4.93-6.52-11.47-5.98-18.44,13.95,1.1,24.36,13.3,23.25,27.25Z"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
+<audio id="clockSound" preload="auto" loop>
+  <source src="media/clock-ticking-sound-effect-240503.mp3" type="audio/mpeg">
+  
+</audio>
+
+<script>
+
+  // gsap.registerPlugin(ScrambleTextPlugin, ScrollTrigger);
+
+  // gsap.from("#line32, #line33", {
+  //   duration: 1.5,
+  //   scrambleText: {
+  //     text: "abcdefghijklmnop:",
+  //     chars: "lowerCase",
+  //     revealDelay: 0,
+  //     speed: 1,
+  //   },
+  //   scrollTrigger: {
+  //     trigger: "#line32, #line33",
+     
+  //     toggleActions: "restart reverse play reverse"
+  //   }
+  // });
+  gsap.registerPlugin(Draggable);
+  
+  
+  const clockSound = document.getElementById('clockSound');
+  
+  Draggable.create("#clockhand", {
+    type: "rotation",
+    inertia: false,
+     edgeResistance: 0.65,
+     onDragStart: function() {
+      clockSound.play();
+    },
+    onDrag: function() {
+     
+      let rotation = this.rotation % 360;
+      if (rotation < 0) rotation += 360;
+      
+      
+      gsap.set("#timegif, #clock", {
+        filter: `hue-rotate(${rotation}deg)`
+      });
+    },
+      onPress: function() {
+      clockSound.play();
+      
+      gsap.to(this.target, { 
+        scale: 1.55, 
+        duration: 0.4,  
+        ease: "bounce" 
+      });
+    },
+      onRelease: function() {
+      gsap.to(this.target, { 
+        scale: 1, 
+        duration: 0.4,  
+        ease: "bounce" 
+      });
+      clockSound.pause();
+      clockSound.currentTime = 0;
+      
+    //   gsap.to(this.target, { 
+    //     scale: 1, 
+    //     duration: 0.4, 
+    //     ease: "bounce"
+    //           });
+    // gsap.set("#time1, #time2, #clock", {
+    //     filter: `hue-rotate(${rotation}deg)`
+    //   });
+    }
+  });
+</script>
+<div id="whitegradient4"></div>
+
+ 
+</div>
+</div>
+
+<div id="numbers">
+   <img src="media/shakingeye.gif" id="eyegif" />
+   <img src="media/shakingeye.gif" id="eyegif2" />
+   <img src="media/shakingeye.gif" id="eyegif3" />
+   <p class="_48 MS blue" id="line38_1">1234567890 — but which came first?</p>
+   <p class="_48 MS blue" id="line38_2">left to right or right to left?</p>
+   <script>
+  gsap.from("#eyegif", {
+    duration: 1.5,
+    ease: "easeInOut",
+    scale: 0,
+    delay: 0.5,
+    scrollTrigger: {
+      trigger: "#eyegif",
+      start: "top 100%",
+      
+      toggleActions: "restart reverse play reverse",
+      
+    }
+  });
+
+  gsap.from("#eyegif2", {
+    duration: 1.5,
+    ease: "easeInOut",
+    scale: 0,
+    delay: 0.25,
+    scrollTrigger: {
+      trigger: "#eyegif2",
+      start: "top 100%",
+      
+      toggleActions: "restart reverse play reverse",
+      
+    }
+  });
+
+  gsap.from("#eyegif3", {
+    duration: 1.5,
+    ease: "easeInOut",
+    scale: 0,
+    delay: 0,
+    scrollTrigger: {
+      trigger: "#eyegif3",
+      start: "top 100%",
+      
+      toggleActions: "restart reverse play reverse",
+      
+    }
+  });
+</script>
+</div>
+<div id="hallway"></div>
+<div id="fillingblanks">
+  <p class="_32 TT white" id="line39">I miss</p>
+  <p class="_32 MS white" id="line40">the games</p>
+  <p class="_32 TT white" id="line41">when I was a child</p>
+  <p class="_32 TT white" id="line42">filling blanks with letters.</p>
+  <p class="_32 TT white" id="line43">as I fill my soul with <span class="MS _48">wonder  and light</span> that faded when rules replaced play.</p>
+   <img src="media/skygif.gif" alt="Sky" class="gif" id="skygif2" />
+
+  <div id="dragNumber">
+ <p class="dragNum original" id="num1">a</p>
+  <p class="dragNum original" id="num2">b</p>
+  <p class="dragNum original" id="num3">c</p>
+  <p class="dragNum original" id="num4">d</p>
+  <p class="dragNum original" id="num5">e</p>
+  <p class="dragNum original" id="num6">f</p>
+  <p class="dragNum original" id="num7">g</p>
+  <p class="dragNum original" id="num8">h</p>
+  <p class="dragNum original" id="num9">i</p>
+  <p class="dragNum original" id="num10">j</p>
+  <p class="dragNum original" id="num11">k</p>
+  <p class="dragNum original" id="num12">l</p>
+  <p class="dragNum original" id="num13">m</p>
+  <p class="dragNum original" id="num14">n</p>
+  <p class="dragNum original" id="num15">o</p>
+  <p class="dragNum original" id="num16">p</p>
+  <p class="dragNum original" id="num17">q</p>
+  <p class="dragNum original" id="num18">r</p>
+  <p class="dragNum original" id="num19">s</p>
+  <p class="dragNum original" id="num20">t</p>
+  <p class="dragNum original" id="num21">u</p>
+  <p class="dragNum original" id="num22">v</p>
+  <p class="dragNum original" id="num23">w</p>
+  <p class="dragNum original" id="num24">x</p>
+  <p class="dragNum original" id="num25">y</p>
+  <p class="dragNum original" id="num26">z</p>
+  
+  <!-- Copy 1 -->
+  <p class="dragNum copy1" id="num1-copy1">a</p>
+  <p class="dragNum copy1" id="num2-copy1">b</p>
+  <p class="dragNum copy1" id="num3-copy1">c</p>
+  <p class="dragNum copy1" id="num4-copy1">d</p>
+  <p class="dragNum copy1" id="num5-copy1">e</p>
+  <p class="dragNum copy1" id="num6-copy1">f</p>
+  <p class="dragNum copy1" id="num7-copy1">g</p>
+  <p class="dragNum copy1" id="num8-copy1">h</p>
+  <p class="dragNum copy1" id="num9-copy1">i</p>
+  <p class="dragNum copy1" id="num10-copy1">j</p>
+  <p class="dragNum copy1" id="num11-copy1">k</p>
+  <p class="dragNum copy1" id="num12-copy1">l</p>
+  <p class="dragNum copy1" id="num13-copy1">m</p>
+  <p class="dragNum copy1" id="num14-copy1">n</p>
+  <p class="dragNum copy1" id="num15-copy1">o</p>
+  <p class="dragNum copy1" id="num16-copy1">p</p>
+  <p class="dragNum copy1" id="num17-copy1">q</p>
+  <p class="dragNum copy1" id="num18-copy1">r</p>
+  <p class="dragNum copy1" id="num19-copy1">s</p>
+  <p class="dragNum copy1" id="num20-copy1">t</p>
+  <p class="dragNum copy1" id="num21-copy1">u</p>
+  <p class="dragNum copy1" id="num22-copy1">v</p>
+  <p class="dragNum copy1" id="num23-copy1">w</p>
+  <p class="dragNum copy1" id="num24-copy1">x</p>
+  <p class="dragNum copy1" id="num25-copy1">y</p>
+  <p class="dragNum copy1" id="num26-copy1">z</p>
+  
+  <!-- Copy 2 -->
+  <p class="dragNum copy2" id="num1-copy2">a</p>
+  <p class="dragNum copy2" id="num2-copy2">b</p>
+  <p class="dragNum copy2" id="num3-copy2">c</p>
+  <p class="dragNum copy2" id="num4-copy2">d</p>
+  <p class="dragNum copy2" id="num5-copy2">e</p>
+  <p class="dragNum copy2" id="num6-copy2">f</p>
+  <p class="dragNum copy2" id="num7-copy2">g</p>
+  <p class="dragNum copy2" id="num8-copy2">h</p>
+  <p class="dragNum copy2" id="num9-copy2">i</p>
+  <p class="dragNum copy2" id="num10-copy2">j</p>
+  <p class="dragNum copy2" id="num11-copy2">k</p>
+  <p class="dragNum copy2" id="num12-copy2">l</p>
+  <p class="dragNum copy2" id="num13-copy2">m</p>
+  <p class="dragNum copy2" id="num14-copy2">n</p>
+  <p class="dragNum copy2" id="num15-copy2">o</p>
+  <p class="dragNum copy2" id="num16-copy2">p</p>
+  <p class="dragNum copy2" id="num17-copy2">q</p>
+  <p class="dragNum copy2" id="num18-copy2">r</p>
+  <p class="dragNum copy2" id="num19-copy2">s</p>
+  <p class="dragNum copy2" id="num20-copy2">t</p>
+  <p class="dragNum copy2" id="num21-copy2">u</p>
+  <p class="dragNum copy2" id="num22-copy2">v</p>
+  <p class="dragNum copy2" id="num23-copy2">w</p>
+  <p class="dragNum copy2" id="num24-copy2">x</p>
+  <p class="dragNum copy2" id="num25-copy2">y</p>
+  <p class="dragNum copy2" id="num26-copy2">z</p>
+
+  <p class="dragNum copy3" id="num1-copy3">a</p>
+  <p class="dragNum copy3" id="num2-copy3">b</p>
+  <p class="dragNum copy3" id="num3-copy3">c</p>
+  <p class="dragNum copy3" id="num4-copy3">d</p>
+  <p class="dragNum copy3" id="num5-copy3">e</p>
+  <p class="dragNum copy3" id="num6-copy3">f</p>
+  <p class="dragNum copy3" id="num7-copy3">g</p>
+  <p class="dragNum copy3" id="num8-copy3">h</p>
+  <p class="dragNum copy3" id="num9-copy3">i</p>
+  <p class="dragNum copy3" id="num10-copy3">j</p>
+  <p class="dragNum copy3" id="num11-copy3">k</p>
+  <p class="dragNum copy3" id="num12-copy3">l</p>
+  <p class="dragNum copy3" id="num13-copy3">m</p>
+  <p class="dragNum copy3" id="num14-copy3">n</p>
+  <p class="dragNum copy3" id="num15-copy3">o</p>
+  <p class="dragNum copy3" id="num16-copy3">p</p>
+  <p class="dragNum copy3" id="num17-copy3">q</p>
+  <p class="dragNum copy3" id="num18-copy3">r</p>
+  <p class="dragNum copy3" id="num19-copy3">s</p>
+  <p class="dragNum copy3" id="num20-copy3">t</p>
+  <p class="dragNum copy3" id="num21-copy3">u</p>
+  <p class="dragNum copy3" id="num22-copy3">v</p>
+  <p class="dragNum copy3" id="num23-copy3">w</p>
+  <p class="dragNum copy3" id="num24-copy3">x</p>
+  <p class="dragNum copy3" id="num25-copy3">y</p>
+  <p class="dragNum copy3" id="num26-copy3">z</p>
+
+   <p class="dragNum copy4" id="num1-copy4">a</p>
+  <p class="dragNum copy4" id="num2-copy4">b</p>
+  <p class="dragNum copy4" id="num3-copy4">c</p>
+  <p class="dragNum copy4" id="num4-copy4">d</p>
+  <p class="dragNum copy4" id="num5-copy4">e</p>
+  <p class="dragNum copy4" id="num6-copy4">f</p>
+  <p class="dragNum copy4" id="num7-copy4">g</p>
+  <p class="dragNum copy4" id="num8-copy4">h</p>
+  <p class="dragNum copy4" id="num9-copy4">i</p>
+  <p class="dragNum copy4" id="num10-copy4">j</p>
+  <p class="dragNum copy4" id="num11-copy4">k</p>
+  <p class="dragNum copy4" id="num12-copy4">l</p>
+  <p class="dragNum copy4" id="num13-copy4">m</p>
+  <p class="dragNum copy4" id="num14-copy4">n</p>
+  <p class="dragNum copy4" id="num15-copy4">o</p>
+  <p class="dragNum copy4" id="num16-copy4">p</p>
+  <p class="dragNum copy4" id="num17-copy4">q</p>
+  <p class="dragNum copy4" id="num18-copy4">r</p>
+  <p class="dragNum copy4" id="num19-copy4">s</p>
+  <p class="dragNum copy4" id="num20-copy4">t</p>
+  <p class="dragNum copy4" id="num21-copy4">u</p>
+  <p class="dragNum copy4" id="num22-copy4">v</p>
+  <p class="dragNum copy4" id="num23-copy4">w</p>
+  <p class="dragNum copy4" id="num24-copy4">x</p>
+  <p class="dragNum copy4" id="num25-copy4">y</p>
+  <p class="dragNum copy4" id="num26-copy4">z</p>
+
+  <p class="dragNum copy5" id="num1-copy5">a</p>
+  <p class="dragNum copy5" id="num2-copy5">b</p>
+  <p class="dragNum copy5" id="num3-copy5">c</p>
+  <p class="dragNum copy5" id="num4-copy5">d</p>
+  <p class="dragNum copy5" id="num5-copy5">e</p>
+  <p class="dragNum copy5" id="num6-copy5">f</p>
+  <p class="dragNum copy5" id="num7-copy5">g</p>
+  <p class="dragNum copy5" id="num8-copy5">h</p>
+  <p class="dragNum copy5" id="num9-copy5">i</p>
+  <p class="dragNum copy5" id="num10-copy5">j</p>
+  <p class="dragNum copy5" id="num11-copy5">k</p>
+  <p class="dragNum copy5" id="num12-copy5">l</p>
+  <p class="dragNum copy5" id="num13-copy5">m</p>
+  <p class="dragNum copy5" id="num14-copy5">n</p>
+  <p class="dragNum copy5" id="num15-copy5">o</p>
+  <p class="dragNum copy5" id="num16-copy5">p</p>
+  <p class="dragNum copy5" id="num17-copy5">q</p>
+  <p class="dragNum copy5" id="num18-copy5">r</p>
+  <p class="dragNum copy5" id="num19-copy5">s</p>
+  <p class="dragNum copy5" id="num20-copy5">t</p>
+  <p class="dragNum copy5" id="num21-copy5">u</p>
+  <p class="dragNum copy5" id="num22-copy5">v</p>
+  <p class="dragNum copy5" id="num23-copy5">w</p>
+  <p class="dragNum copy5" id="num24-copy5">x</p>
+  <p class="dragNum copy5" id="num25-copy5">y</p>
+  <p class="dragNum copy5" id="num26-copy5">z</p>
+
+
+
+<script>
+  gsap.registerPlugin(Draggable,ScrambleTextPlugin);
+
+  
+
+  // Second set
+  Draggable.create(".dragNum", {
+    type: "xy",
+    inertia: false,
+    edgeResistance: 0.65,
+    onPress: function() {
+      gsap.to(this.target, { scale: 4, duration: 0.4, rotation: 15, ease: "bounce" });
+      gsap.from(this.target, {
+        duration: 1.5,
+        scrambleText: {
+          
+          chars: "lowerCase",
+          revealDelay: 0,
+          speed: 1,
+        }
+      });
+    },
+    onRelease: function() {
+      gsap.to(this.target, { scale: 1, duration: 0.4, rotation: 0, ease: "bounce"});
+    }
+  });
+</script>
+
+
+  
+
+   
+
+</div>
+<div id="boxes">
+    <p class=" _48 MS white" id="cross1">1</p>
+  <p class=" _48 MS white" id="cross2">2</p>
+  <p class=" _48 MS white" id="cross3">3</p>
+  <p class=" _48 MS white" id="cross4">4</p>
+  <p class=" _48 MS white" id="cross5">5</p>
+  <p class=" _48 MS white" id="cross6">6</p>
+<div class="blankbox" id="blank1"></div>
+<div class="blankbox" id="blank2"></div>
+<div class="blankbox" id="blank3"></div>
+<div class="blankbox" id="blank4"></div>
+<div class="blankbox" id="blank5"></div>
+<div class="blankbox" id="blank6"></div>
+<div class="blankbox" id="blank7"></div>
+<div class="blankbox" id="blank8"></div>
+<div class="blankbox" id="blank9"></div>
+<div class="blankbox" id="blank10"></div>
+<div class="blankbox" id="blank11"></div>
+<div class="blankbox" id="blank12"></div>
+<div class="blankbox" id="blank13"></div>
+<div class="blankbox" id="blank14"></div>
+<div class="blankbox" id="blank15"></div>
+<div class="blankbox" id="blank16"></div>
+<div class="blankbox" id="blank17"></div>
+<div class="blankbox" id="blank18"></div>
+<div class="blankbox" id="blank19"></div>
+<div class="blankbox" id="blank20"></div>
+<div class="blankbox" id="blank21"></div>
+<div class="blankbox" id="blank22"></div>
+<div class="blankbox" id="blank23"></div>
+<div class="blankbox" id="blank24"></div>
+<div class="blankbox" id="blank25"></div>
+<div class="blankbox" id="blank26"></div>
+<div class="blankbox" id="blank27" style="top: 100px; left: -220px; scale: 0.5"></div>
+<div class="blankbox" id="blank28" style="top: 145px; left: 830px; scale: 0.5"></div>
+<div class="blankbox" id="blank29" style="top: 163px; left: -120px; scale: 0.5"></div>
+<div class="blankbox" id="blank30" style="top: 178px; left: 1px; scale: 0.5"></div>
+<div class="blankbox" id="blank31" style="top: 189px; left: 1230px; scale: 0.5"></div>
+<div class="blankbox" id="blank32" style="top: 205x; left: -97px; scale: 0.5"></div>
+<div class="blankbox" id="blank33" style="top: 234px; left: 1090px; scale: 0.5"></div>
+<div class="blankbox" id="blank34" style="top: 258px; left: -110px; scale: 0.5"></div>
+<div class="blankbox" id="blank35" style="top: 267px; left: 1100px; scale: 0.5"></div>
+<div class="blankbox" id="blank36" style="top: 288px; left: -190px; scale: 0.5"></div>
+<div class="blankbox" id="blank37" style="top: 300px; left: 937px; scale: 0.5"></div>
+<div class="blankbox" id="blank38" style="top: 329px; left: -100px; scale: 0.5"></div>
+<div class="blankbox" id="blank39" style="top: 344px; left: 1230px; scale: 0.5"></div>
+<div class="blankbox" id="blank40" style="top: 355px; left: 1130px; scale: 0.5"></div>  
+</div>
+  <p class="clues _32 MS white" id="clue1">1. i just want to wake up from this (...)</p>
+  <p class="clues _32 MS white" id="clue2">2. do i have to walk this road (...)?</p>
+  <p class="clues _32 MS white" id="clue3">3. i need somebody to carry me through the (...)</p>
+  <p class="clues _32 MS white" id="clue4">4. feels like only i can bring myself the (...)</p>
+  <p class="clues _32 MS white" id="clue5">5. why does everybody turn their (...) eye to me?</p>
+  <p class="clues _32 MS white" id="clue6">6. why won't anybody just give me a bit of (...)</p>
+
+</div>
+<div id="mismatch">
+<img src="media/Comptexture.gif" alt="Mismatch" class="gif" id="mismatchgif" />
+<p class="_48 MS white" id="line44">i am the mismatch in the rules you make<br><br> or maybe i’m not—just playing it differently.</p>
+<p class="_48 MS white" id="line45">i need my own way to read this game, <br><br>my own kind of mind to make it make sense.</p>
+
+<script>
+
+  gsap.registerPlugin(ScrambleTextPlugin, ScrollTrigger);
+
+  gsap.from("#line45, #line44", {
+    duration: 1,
+    scrambleText: {
+      text: "i hate people who think they know me",
+      chars: "lowerCase",
+      revealDelay: 0.5,
+      speed: 1,
+    },
+    scrollTrigger: {
+      trigger: "#line45, #line44",
+      start: "top 70%",
+      end: "top 30%",
+      scrub: 1,
+      toggleActions: "restart reverse play reverse"
+    }
+  });
+</script>
+</div>
+<div id="cubist">
+  <p class="_48 TT blue" id="line46"><span id="cub1">i learn differently.</span><br><span id="cub2">i see your world</span><br><span id="cub3">like a cubist painting—</span><br><span id="cub4">everything’s there,<br>but tilted</span></p>
+  <p class="_48 MS blue" id="off">off</p>
+  <p class="_48 MS blue" id="axis">axis.</p>
+</div>
+<div id="ihearmusic">
+  <div id="clef">
+    <img src="media/clef-01.png" alt="Clef" class="gif" id="clefimg" style="width: 15%; height: auto;" />
+  </div>
+  <div id="clefline1" class="clefline"></div>
+  <div id="clefline2" class="clefline"></div>
+  <div id="clefline3" class="clefline"></div>
+  <div id="clefline4" class="clefline"></div>
+  <div id="clefline5" class="clefline"></div>
+  <p class="_48 MS stroked" id="line47">i hear music</p>
+  <p class="_48 MS stroked" id="line48">in typos</p>
+  <p class="_48 MS stroked" id="line49">i read emotions</p>
+  <p class="_48 MS stroked" id="line50">before logic.</p>
+  <p class="_64 MS blue note" id="line51">p</p>
+  <p class="_64 MS blue note" id="line52">d</p>
+  <p class="_64 MS blue note" id="line53">q</p>
+  <p class="_64 MS blue note" id="line54">b</p>
+  <audio id="hover-soundC" src="media\the-sound-of-the-note-do.mp3" preload="auto"></audio>
+  <audio id="hover-soundD" src="media\re-note-sound.mp3" preload="auto"></audio>
+  <audio id="hover-soundE" src="media\the-sound-of-the-note-mi.mp3" preload="auto"></audio>
+  <audio id="hover-soundF" src="media\fa-note-sound.mp3" preload="auto"></audio>
+  <audio id="hover-soundA" src="media\the-sound-of-the-note-a-is-stretched.mp3" preload="auto"></audio>
+
+    <script>
+      gsap.registerPlugin(Draggable) 
+            Draggable.create(".note", {
+                    type: "xy",
+                    inertia: false,
+                        edgeResistance: 0.65,
+                    
+                    onPress: function() {
+                        gsap.to(this.target, { scale: 4, duration: 0.4, rotation: 0, ease: "bounce" });
+                    },
+                    onRelease: function() {
+                        gsap.to(this.target, { scale: 1, duration: 0.4, rotation: 0, ease: "bounce"});
+                    }
+                    });
+
+    document.getElementById('line51').addEventListener('mouseenter', function() {
+    const audio = document.getElementById('hover-soundC');
+    audio.currentTime = 0;
+    audio.play();
+});
+document.getElementById('line52').addEventListener('mouseenter', function() {
+    const audio = document.getElementById('hover-soundD');
+    audio.currentTime = 0;
+    audio.play();
+});
+document.getElementById('line53').addEventListener('mouseenter', function() {
+    const audio = document.getElementById('hover-soundE');
+    audio.currentTime = 0;
+    audio.play();
+});
+document.getElementById('line54').addEventListener('mouseenter', function() {
+    const audio = document.getElementById('hover-soundF');
+    audio.currentTime = 0;
+    audio.play();
+});
+document.getElementById('clefline1').addEventListener('mouseenter', function() {
+    const audio = document.getElementById('hover-soundA');
+    audio.currentTime = 0;
+    audio.play();
+});
+
+document.getElementById('clefline2').addEventListener('mouseenter', function() {
+    const audio = document.getElementById('hover-soundA');
+    audio.currentTime = 0;
+    audio.play();
+});
+
+document.getElementById('clefline3').addEventListener('mouseenter', function() {
+    const audio = document.getElementById('hover-soundA');
+    audio.currentTime = 0;
+    audio.play();
+});
+
+document.getElementById('clefline4').addEventListener('mouseenter', function() {
+    const audio = document.getElementById('hover-soundA');
+    audio.currentTime = 0;
+    audio.play();
+});
+  
+    </script>
+
+</div>
+<div id="space">
+  <p class="_48 MS blue" id="line55">i feel space in silence
+and guidance in space</p>
+<p class="_48 MS stroked" id="line56">am i supposed to see something?</p>
+<img src="media/whitecloud.png"  id="cloud" />
+<img src="media/whitecloud.png"  id="cloud2" />
+<img src="media/butterfly.gif"  id="butterflygif" />
+<img src="media/houseimg.png"  id="house" />
+<p class="_32 MS blue" id="line57">you see chaos,</p>
+<p class="_32 MS blue" id="line58">i see a different kind of pattern.</p>
+
+<script>
+   gsap.to("#line55", {
+    duration: 3,
+    scrambleText: {
+      text: "i feel space in silence and guidance in space",
+      chars: "lowerCase",
+      revealDelay: 0.5,
+      speed: 1,
+    },
+    scrollTrigger: {
+      trigger: "#line55",
+     
+      toggleActions: "restart reverse play reverse"
+    }
+  });
+
+  gsap.to("#line58", {
+    duration: 2,
+    scrambleText: {
+      text: "i see a different kind of pattern.",
+      chars: "lowerCase",
+      revealDelay: 0.5,
+      speed: 1,
+    },
+    scrollTrigger: {
+      trigger: "#line58",
+     
+      toggleActions: "restart reverse play reverse"
+    }
+  });
+</script>
+<img src="media\dyslexia-gif_1.gif"  id="dyslexiagif2" />
+<!-- <img src="media\dyslexia-gif_1.gif"  id="dyslexiagif3" /> -->
+<img src="media\skygif.gif"  id="skygif3" />
+<img src="media\butterfly.gif"  id="butterflygif2" />
+<p class="_48 MS stroked drag" id="line59">isn't a flaw</p>
+<p class="_48 MS stroked drag" id="line60">just a wild lens</p>
+<p class="_48 MS stroked drag" id="line61">on a too-rigid world</p>
+<p class="_96 TT stroked drag" id="line62">a</p>  
+<p class="_96 TT stroked drag" id="line63">r</p>
+<p class="_96 TT stroked drag" id="line64">e</p>
+<p class="_96 TT stroked drag" id="line65">a</p>  
+<p class="_96 TT stroked drag" id="line66">l</p>
+<p class="_96 TT stroked drag" id="line67">l</p>
+<p class="_96 TT stroked drag" id="line68">y</p>
+<p class="_96 TT stroked drag" id="line69">w</p>
+<p class="_96 TT stroked drag" id="line70">i</p>
+<p class="_96 TT stroked drag" id="line71">l</p>
+<p class="_96 TT stroked drag" id="line72">d</p>
+<p class="_96 TT stroked drag" id="line73">l</p>
+<p class="_96 TT stroked drag" id="line74">e</p>
+<p class="_96 TT stroked drag" id="line75">n</p>
+<p class="_96 TT stroked drag" id="line76">s</p>
+<p class="_32 MS stroked drag" id="line77">just because you see it, doesn’t mean that it is right</p>
+<p class="_32 MS stroked drag" id="line78">who are you, to tell me, how i should see the world?</p>
+
+<script>
+     gsap.registerPlugin(Draggable) 
+            Draggable.create(".drag", {
+                    type: "xy",
+                    inertia: false,
+                        edgeResistance: 0.65,
+                    
+                    onPress: function() {
+                        gsap.to(this.target, { scale: 2.5, duration: 0.4, rotation: 0, ease: "bounce" });
+                    },
+                    onRelease: function() {
+                        gsap.to(this.target, { scale: 1, duration: 0.4, rotation: 0, ease: "bounce"});
+                    }
+                    });
+</script>
+<div id="lensline1"></div>
+<div id="lensline2"></div>
+</div>
+
+  
+</div>
+</div>
+
+</body>
+</html>
