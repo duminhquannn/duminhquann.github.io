@@ -3,7 +3,7 @@
 body {
     margin: 0;
     overflow-x: hidden;
-    /* cursor: url("hand1.png") 15 0, auto; */
+    
 }
 
 
@@ -40,9 +40,10 @@ p {
     position: fixed;
     width: 7.8125vw;
     z-index: 1000;
-    top: 42.9219vw;
+    top: 40.9219vw;
     left: 7.8125vw;
-    mix-blend-mode: overlay;
+    mix-blend-mode: difference;
+    
     opacity: 1;
     filter: blur(0.1vw);
 
@@ -81,10 +82,12 @@ p {
     position: fixed;
     width: 7.8125vw;
     z-index: 1000;
-    top: 40.9219vw;
-    left: 19.5313vw;
+    top: 38.9219vw;
+    left: 82.5313vw;
     mix-blend-mode: difference;
     opacity: 1;
+    
+
     filter: blur(0.1vw);
 
 }
@@ -129,7 +132,9 @@ p {
     
 }
 
-
+#smoothContent {
+    height: 1235vw;
+}
 
 .blue {
   color: #0F0FA1;
@@ -204,9 +209,55 @@ p {
     margin: 0.0000vw;
 }
 
+#titleText1 {
+    position: absolute;
+    top: 17.9063vw;
+    left: 15.6250vw;
+    width: 70%;
+    text-align: center;
+    z-index: 15;
+}
+
+#startBtn {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10.0000vw;
+    height: 2.4688vw;
+    margin: 0.0000vw;
+    text-align: center;
+    font-size: 1.2500vw;
+    color: #0F0FA1;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0.6953vw;
+    border: 1px solid #0F0FA1;
+    transition: both 0.2s ease-in-out;
+}
+
+#startBtn:hover {
+    transform: translate(-50%, -50%) scale(1.05);
+    transition: transform 0.2s ease-in-out;
+    background-color: #0F0FA1;
+    color: white;
+    
+}
+
 #titlegif {
+    position: absolute;
+    top: 0vw;
+    left: 15vw;
     margin: 0;
-    width: 100%;}
+    width: 70%;}
+
+#background0 {
+    width: 100.0000vw;
+    height: 56.2500vw;
+    position: relative;
+    top: 1.0953vw;
+    background: linear-gradient(180deg, #0F0FA1 0.11%, rgba(15, 15, 161, 0.00) 63.64%);
+    rotate: -180deg;
+}
 
 #background1 {
      width: 100.0000vw;
@@ -228,12 +279,7 @@ p {
     left: 23.4375vw;
 }
 
-/* #bookgif {
-    position: relative;
-    top: 3.9063vw;
-    left: 13.6719vw;
-    
-} */
+
 
 #bookgif {
     position: relative;
@@ -578,10 +624,7 @@ p {
 
 
 
-/* .digimg:hover {
-    transform: scale(1.2);
-    transition: 100ms ease-in-out;
-} */
+
 
 #dug {
     position: absolute;
@@ -654,7 +697,7 @@ p {
     position: absolute;
     rotate: 180deg;
     width: 100%;
-    top: 58.5938vw;
+    top: 64.5938vw;
     left: 0.0000vw;
 }
 
@@ -662,7 +705,7 @@ p {
     position: absolute;
     width: 100.0000vw;
     height: 19.5313vw;
-    top: 50.7813vw;
+    top: 54.7813vw;
     background: linear-gradient(180deg, rgba(15, 15, 161, 0.00) 0%, #0F0FA1 50.96%, rgba(15, 15, 161, 0.00) 100%);
 }
 
@@ -812,7 +855,7 @@ p {
 
 #whitegradient3 {
     position: absolute;
-    top: 681vw;
+    top: 433vw;
     left: 0;
     width: 100vw;
     height: 30vh;
@@ -835,25 +878,13 @@ p {
     
 }
 
-#time1 {
-    position: absolute;
-    left: -31.4063vw;
-    scale: 120%;
-}
 
-#time2 {
-    
-    position: absolute;
-    left: 58.5938vw;
-    scale: 120%;
-    transform: scaleX(-1);
-}
 
 #timegif {
     position: absolute;
-    width: 100%;
+    width: 101%;
     top: 0.0000vw;
-    left: 0.0000vw;
+    left: -0.150000vw;
     z-index: -1;
 }
 
@@ -977,8 +1008,8 @@ p {
 #clockhand {
     position: absolute;
     width: 6%;
-    top: 49%;
-    left: 52.4%;
+    top: 51.4%;
+    left: 52.9%;
     transform: translateX(-50%);
     transform-origin: 8% 8%;
 }
@@ -995,7 +1026,7 @@ p {
 #eyegif {
     position: absolute;
     width: 50vw;
-    top: -2.0000vw;
+    top: 2.0000vw;
     left: 27.0000vw;
     z-index: 10;
     opacity: 1;
@@ -1004,7 +1035,7 @@ p {
 #eyegif2 {
     position: absolute;
     width: 60vw;
-    top: -4.5000vw;
+    top: -0.5000vw;
     left: 22.5000vw;
     z-index: 9;
     opacity: 0.4;
@@ -1013,7 +1044,7 @@ p {
 #eyegif3 {
     position: absolute;
     width: 70vw;
-    top: -7.4vw;
+    top: -3.4vw;
     left: 18.000vw;
     z-index: 8;
     opacity: 0.2;
@@ -1031,12 +1062,29 @@ p {
     left: 54.7813vw;
 }
 
+#whitegradient5 {
+    position: absolute;
+    top: 47vw;
+    left: 0;
+    width: 100vw;
+    height: 30vh;
+    
+    /* rotate: 180deg; */
+    /* background-color: #0F0FA1; */
+    background: linear-gradient(
+        to bottom,
+        rgba(255,255,255,1) 30%,
+        rgba(255,255,255,0) 100%
+    );
+    z-index: 7;
+}
+
 #hallway {
     position: relative;
    width: 100.0000vw;
     height: 56.2500vw;
     top: 441.4063vw;
-    background-color: #0F0FA1;
+    background-color: transparent;
 }
 
 #fillingblanks {
@@ -1046,6 +1094,24 @@ p {
     top: 445.3125vw;
     background-color: transparent;
 }
+
+#whitegradient6 {
+    position: absolute;
+    top: 94vw;
+    left: 0;
+    width: 100vw;
+    height: 30vh;
+    
+    rotate: 180deg;
+    /* background-color: #0F0FA1; */
+    background: linear-gradient(
+        to bottom,
+        rgba(255,255,255,1) 30%,
+        rgba(255,255,255,0) 100%
+    );
+    z-index: 7;
+}
+
 #line39 {
     position: absolute;
     top: -1.5625vw;
@@ -1068,20 +1134,7 @@ p {
     left: 46.8750vw;
 }
 
-/* .dragNum {
-    position: absolute;
 
-    color: #0F0FA1;
-    font-size: 1.8750vw;
-    font-family: "Manufacturing Consent", system-ui;
-   
-}
-
-#dragNum {
-    width: 100.0000vw;
-    height: 56.2500vw;
-    justify-content: space-evenly;
-} */
 
 #dragNumber {
     position: relative;
@@ -1154,14 +1207,7 @@ p {
     scale: 1.2 ;
     }
 
-    /* .blankbox {
-        position: absolute;
-        width: 1.9531vw;
-        height: 2.3438vw;
-        opacity: 0.8;
-        background-color: white;
-        border: 0.0391vw solid #0F0FA1;
-    } */
+ 
 
 
     .blankbox {
@@ -1689,8 +1735,8 @@ p {
     width: 120.0000vw;
     height: auto;
     mix-blend-mode: plus-lighter;
-    filter: brightness(1);
-    filter: blur(0.1vw);
+    filter: brightness(0.2);
+    /* filter: blur(0.1vw); */
 
     
 }
@@ -1886,7 +1932,7 @@ p {
     left: 15.0000vw;
     z-index: 1;
     opacity: 1;
-    mix-blend-mode: overlay;
+    mix-blend-mode: normal;
 }
 
 #dyslexiagif3 {
@@ -1895,9 +1941,43 @@ p {
     left: -60.0000vw;
     width: 220.0000vw;
     height: auto;
-    mix-blend-mode: plus-lighter;
+    mix-blend-mode: normal;
     filter: brightness(200%);
     filter: blur(0.5vw);
     opacity: 0.3;
     
+}
+
+#whitegradient7 {
+    position: absolute;
+    top: 154vw;
+    left: 0;
+    width: 100vw;
+    height: 30vh;
+    
+    rotate: 180deg;
+    /* background-color: #0F0FA1; */
+    background: linear-gradient(
+        to bottom,
+        rgba(255,255,255,1) 30%,
+        rgba(255,255,255,0) 100%
+    );
+    z-index: 12;
+}
+
+#whitegradient8 {
+    position: absolute;
+    top: 105vw;
+    left: 0;
+    width: 100vw;
+    height: 30vh;
+    
+    /* rotate: 180deg; */
+    /* background-color: #0F0FA1; */
+    background: linear-gradient(
+        to bottom,
+        rgba(255,255,255,1) 30%,
+        rgba(255,255,255,0) 100%
+    );
+    z-index: 12;
 }
