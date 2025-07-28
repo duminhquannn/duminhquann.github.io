@@ -3,45 +3,19 @@
 <head>
     <link rel="stylesheet" href="styles.css" />
     <meta charset="UTF-8" />
-    <title>I Who Quietly Trace The Words</title>
+    <title>Dyslexia</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <!-- *FONT LINKS* -->
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manufacturing+Consent&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-
+     <script src="main.js" defer></script>
     </head>
 <body>
-<div id="wrapper">
-
-   <script>
-    
-   </script>
-    <!-- GSAP -->
-     <script src="gsap.min.js"></script>
-    <script src="Draggable.min.js"></script>
-    <script src="InertiaPlugin.min.js"></script>
-    <script src="ScrollTrigger.min.js"></script>
-    <script src="ScrambleTextPlugin.min.js"></script>
-    
-
-
-
-    <!-- <svg id="eye1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 567.57 312.68">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: #ff0000;
-      }
-    </style>
-  </defs>
-  <g id="Layer_1-2" data-name="Layer_1">
-    <path class="cls-1" d="M390.79-44.32h93.66V49.33c0,169.81-137.86,307.68-307.68,307.68h-93.66v-93.66c0-169.81,137.86-307.68,307.68-307.68Z" transform="translate(193.67 -154.88) rotate(45)"/>
-  </g>
-</svg> -->
-
-<svg id="eye1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 658.1 636.18">
+  <p class="_48 MS stroked" id="mute">Mute</p>
+    <p class="_48 MS stroked" id="unmute">Unmute</p>
+  <svg id="eye1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 658.1 636.18">
   <defs>
     <style>
       .cls-1 {
@@ -59,18 +33,7 @@
   </g>
 </svg>
 
-<!-- <svg id="eye2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 567.57 312.68">
-  <defs>
-    <style>
-      .cls-2 {
-        fill: #e5ff00;
-      }
-    </style>
-  </defs>
-  <g id="Layer_1-2" data-name="Layer_1">
-    <path class="cls-2" d="M390.79-44.32h93.66V49.33c0,169.81-137.86,307.68-307.68,307.68h-93.66v-93.66c0-169.81,137.86-307.68,307.68-307.68Z" transform="translate(193.67 -154.88) rotate(45)"/>
-  </g>
-</svg> -->
+
 <svg id="eye2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 613.58 717.88">
   <defs>
     <style>
@@ -88,79 +51,37 @@
     <circle class="cls-2" cx="335.36" cy="29.22" r="22"/>
   </g>
 </svg>
-<script>
 
-        gsap.registerPlugin(Draggable) 
-            Draggable.create("#eye1", {
-                    type: "xy",
-                    inertia: false,
-                        edgeResistance: 0.65,
-                    // bounds: {top: 100, left: 0, width: 2560, height: 98000},
-                    onPress: function() {
-                        gsap.to(this.target, { scale: 4, duration: 0.4, rotation: 0, ease: "bounce" });
-                    },
-                    onRelease: function() {
-                        gsap.to(this.target, { scale: 1, duration: 0.4, rotation: 0, ease: "bounce" });
-                    }
-                    });
+<div id="wrapper">
+<div id="smoothContent">
+  
+    
+    <script src="gsap.min.js"></script>
+    <script src="Draggable.min.js"></script>
+    <script src="InertiaPlugin.min.js"></script>
+    <script src="ScrollTrigger.min.js"></script>
+    <script src="ScrambleTextPlugin.min.js"></script>
+    <script src="ScrollSmoother.min.js"></script>
+     
+    
 
-                    gsap.registerPlugin(Draggable) 
-            Draggable.create("#eye2", {
-                    type: "xy",
-                    inertia: false,
-                        edgeResistance: 0.65,
-                    // bounds: {top: 100, left: 0, width: 2560, height: 98000},
-                    onPress: function() {
-                        gsap.to(this.target, { scale: 4, duration: 0.4, rotation: 0, ease: "bounce" });
-                    },
-                    onRelease: function() {
-                        gsap.to(this.target, { scale: 1, duration: 0.4, rotation: 0, ease: "bounce" });
-                    }
-                    });
-    </script>
+
+
+
+
 
 
 
 <div id="title">
-
+  <div id="background0"></div>
+    <img  src="media/dyslexia-gif_1.gif" id="titlegif" />
+    <p  class="_32 MS blue" id="titleText1">Some minds don’t read in straight lines. <br><br> Letters tilt, shift, fall out of mind. <br><br>It’s not broken-just different.<br><br>This poem isn’t a fix.<br><br>It’s a window.
+</p>
     <audio id="BGmusic" src="media/221222-meditation-psychedelic-dark-world-spiritual-155651.mp3" preload="auto" loop></audio>
-    <img src="media/title.gif" alt="I Who Quietly Trace The Words" class="gif" id="titlegif" />
-    <p class="_48 MS stroked" id="mute">Mute</p>
-    <p class="_48 MS stroked" id="unmute">Unmute</p>
-<script>
-    document.getElementById('titlegif').addEventListener('mouseenter', function() {
-    const audio = document.getElementById('BGmusic');
-    audio.currentTime = 0;
-    audio.play();
-  });
+    
+    
+    <button  class="_64 MS stroked" id="startBtn">It's all blurry...</button>
 
-  //  document.getElementById('mute').addEventListener('click', function() {
-  //   document.querySelectorAll('audio').forEach(function(audio) {
-  //     audio.pause();
-  //     audio.currentTime = 0;
-  //   });
-  //   document.getElementById('mute').style.transition = "transform 0.5s cubic-bezier(.68,-0.55,.27,1.55)";
-  //   document.getElementById('mute').style.transform = "scale(0)";
-  // });
-
-  const muteBtn = document.getElementById('mute');
-const unmuteBtn = document.getElementById('unmute');
-
-unmuteBtn.style.display = 'none'; 
-
-muteBtn.onclick = function() {
-  document.querySelectorAll('audio').forEach(audio => audio.muted = true);
-  muteBtn.style.display = 'none';
-  unmuteBtn.style.display = 'inline-block';
-};
-
-unmuteBtn.onclick = function() {
-  document.querySelectorAll('audio').forEach(audio => audio.muted = false);
-  unmuteBtn.style.display = 'none';
-  muteBtn.style.display = 'inline-block';
-}; 
-
-</script>
 </div>
 <div id="background1"></div>
 <div id="icanfeelthem">
@@ -168,14 +89,14 @@ unmuteBtn.onclick = function() {
     <p class="_24 MS white" id="line1"> i can feel them sinking into my chest...</p>
     <p class="_24 MS white" id="line2"> my waves...</p>
     <p class="_24 MS white" id="line3"> my ocean...</p>
-    <p class="_24 MS white" id="line3_1"> this pair of eyes, i must hold tightly.<br>&#40;try moving the eyes in the corner&#41;.</p>
-    <img src="media/blueeye3.png" alt="Eyes" class="gif" id="blueeyes1" />
-      <img src="media/blueeye3.png" alt="Eyes" class="gif" id="blueeyes2" />
+    <p data-speed="0.9" class="_24 MS white" id="line3_1"> this pair of eyes, i must hold tightly.<br>&#40;try moving the eyes in the corner&#41;.</p>
+    <img data-speed="0.9" src="media/blueeye3.png" alt="Eyes" class="gif" id="blueeyes1" />
+      <img data-speed="0.9" src="media/blueeye3.png" alt="Eyes" class="gif" id="blueeyes2" />
 
 </div>
 <div id="theysay">
-    <p class="_64 MS blue" id="line4"> They say:</p>
-    <img src="media/bookstackgif.gif" alt="They say:"  id="bookgif" />
+    <p data-speed="0.8" class="_64 MS blue" id="line4"> They say:</p>
+    <img  src="media/bookstackgif.gif" alt="They say:"  id="bookgif" />
     <p class="_48 TT blue" id="line5">Read</p>
     <p class="_48 TT blue" id="line6">the</p>
     <p class="_48 TT blue" id="line7">word,</p>
@@ -185,124 +106,44 @@ unmuteBtn.onclick = function() {
     <div class="bookline" id="bookline3"></div>
 </div>
 
-<script>
 
-  gsap.registerPlugin(ScrambleTextPlugin, ScrollTrigger);
-
-  gsap.to("#line4", {
-    duration: 2,
-    scrambleText: {
-      text: "They say:",
-      chars: "upperAndLowerCase",
-      revealDelay: 0.5,
-      speed: 1,
-    },
-    scrollTrigger: {
-      trigger: "#line4",
-     
-      toggleActions: "restart reverse play reverse"
-    }
-  });
-
-  gsap.from("#bookgif", {
-    duration: 0.5,
-    ease: "bounce",
-    scale: 0,
-    scrollTrigger: {
-      trigger: "#bookgif",
-      start: "top 100%",
-     
-      toggleActions: "restart reverse play reverse"
-    }
-  });
-</script>
 
 <div id="but">
-    <img src="media/ascii-art (8).png" alt="Butterfly" class="gif" id="butgif" />
-    <p class="_48 MS blue" id="line9">But the word..</p>
-    <svg id="butline" xmlns="http://www.w3.org/2000/svg" width="1939" height="1243" viewBox="0 0 1939 1243" fill="none">
+    <img  src="media/ascii-art (8).png"  class="gif" id="butgif" />
+    <p data-speed="0.7" class="_48 MS blue" id="line9">But the word..</p>
+    <svg data-speed="0.8" id="butline" xmlns="http://www.w3.org/2000/svg" width="1939" height="1243" viewBox="0 0 1939 1243" fill="none">
   <path d="M1 1130.4C128.5 992.73 459.5 719.796 763.5 729.396C1143.5 741.396 573.5 958.897 643 807.897C712.5 656.897 1363.5 1063.4 1559.5 581.397C1755.5 99.3969 1179.5 -181.103 866 135.397C552.5 451.897 1334 325.896 1002 192.896C670 59.8965 -68.5 442.896 245 656.896C558.5 870.896 1869.5 -238.104 1933 280.396C1996.5 798.896 1303 1181.9 1279 1024.9C1255 867.896 1490 846.896 1387.5 1024.9C1285 1202.9 806 976.396 914.5 1241.9"/>
 </svg>
 <p class="_32 TT blue" id="line10">slips</p>
-<p class="_32 TT blue" id="line11">off</p>
+<p data-speed="0.7" class="_32 TT blue" id="line11">off</p>
 <p class="_32 TT blue" id="line12">the</p>
 <p class="_32 TT blue" id="line13">tounge</p>
-<p class="_32 TT blue" id="line14">like</p>
+<p data-speed="0.7" class="_32 TT blue" id="line14">like</p>
 <p class="_32 TT blue" id="line15">butter</p>
 <p class="_32 TT blue" id="line16">off</p>
-<p class="_32 TT blue" id="line17">glass</p>
+<p data-speed="0.7" class="_32 TT blue" id="line17">glass</p>
 <p class="_32 MS blue" id="line18">no grip,</p>
 <p class="_32 MS blue" id="line19">no anchor.</p>
-<div class="whiteblock" id="wb1"></div>
+<div data-speed="1.7" class="whiteblock" id="wb1"></div>
 <div class="whiteblock" id="wb2"></div>
 <div class="whiteblock" id="wb3"></div>
-<div class="whiteblock" id="wb4"></div>
+<div data-speed="1.7" class="whiteblock" id="wb4"></div>
 <div class="whiteblock" id="wb5"></div>
-<div class="whiteblock" id="wb6"></div>
+<div data-speed="0.7" class="whiteblock" id="wb6"></div>
 <div class="whiteblock" id="wb7"></div>
-<div class="whiteblock" id="wb8"></div>
-<div class="whiteblock" id="wb9"></div>
+<div data-speed="0.7" class="whiteblock" id="wb8"></div>
+<div data-speed="0.7" class="whiteblock" id="wb9"></div>
 <div class="whiteblock" id="wb10"></div>
-<div class="whiteblock" id="wb11"></div>
+<div data-speed="1.7" class="whiteblock" id="wb11"></div>
 <div class="whiteblock" id="wb12"></div>
-<div class="whiteblock" id="wb13"></div>
+<div data-speed="0.7" class="whiteblock" id="wb13"></div>
 <div class="whiteblock" id="wb14"></div>
-<div class="whiteblock" id="wb15"></div>
+<div data-speed="1.7" class="whiteblock" id="wb15"></div>
 <div class="whiteblock" id="wb16"></div>
-<div class="whiteblock" id="wb17"></div>
+<div data-speed="0.7" class="whiteblock" id="wb17"></div>
 <div class="whiteblock" id="wb18"></div>
 
-<script>
 
-gsap.registerPlugin(Draggable) 
-    Draggable.create(".whiteblock", {
-            type: "x",
-            inertia: false,
-                edgeResistance: 0.65,
-            bounds: {top: 100, left: 0, width: 2560, height: 98000},
-            // onPress: function() {
-            //     gsap.to(this.target, { scale: 1, duration: 0.4, rotation: 0, ease: "bounce" });
-            // },
-            // onRelease: function() {
-            //     gsap.to(this.target, { scale: 1, duration: 0.4, rotation: 0, ease: "bounce"});
-            // }
-            });
-
-gsap.registerPlugin(ScrollTrigger)
-gsap.utils.toArray(".whiteblock").forEach(function(block) {
-  gsap.from(block, {
-    duration: 1.25,
-    ease: "easeInOut",
-    scale: 0,
-    scrollTrigger: {
-      trigger: block,
-      start: "top 100%",
-      toggleActions: "restart reverse play reverse"
-    }
-  });
-});
-
-// gsap.from("#line18, #line19", {
-//     duration: 1.25,
-//     ease: "bounce",
-//     scaleX: 20,
-//     filter: "blur(20px)",
-//     scrollTrigger: {
-//       trigger: "#line18, #line19",
-//       start: "top 100%",
-//       toggleActions: "restart reverse play reverse"
-//     }
-//   });
-
-
-
-  
-       
-
-  
-
-
-</script>
 </div>
 
 <div id="dig">
@@ -323,94 +164,30 @@ gsap.utils.toArray(".whiteblock").forEach(function(block) {
     <img src="media/AdobeStock_788729707.png" class="digimg" id="dig5" />
     </div>
     
-    <script>
+ 
 
-        gsap.registerPlugin(Draggable) 
-            Draggable.create(".digimg", {
-                    type: "xy",
-                    inertia: true,
-                        edgeResistance: 0.65,
-                    bounds: {top: 100, left: 0, width: 2560, height: 98000},
-                   
-                    onPress: function() {
-                        gsap.to(this.target, { scale: 1.5, duration: 0.4, rotation: 0, ease: "bounce" });
-                    },
-                    onRelease: function() {
-                        gsap.to(this.target, { scale: 1, duration: 0.4, ease: "bounce"});
-                    }
-                    });
-        
-gsap.registerPlugin(ScrollTrigger)
-gsap.utils.toArray("#line20, #line21, #line22, #line23, #line24, #line25").forEach(function(digtext) {
-  gsap.from(digtext, {
-    duration: 1,
-    ease: "easeInOut",
-    letterSpacing: "-1em",
-    opacity: 0,
-    scrollTrigger: {
-      trigger: digtext,
-      start: "top 100%",
-      toggleActions: "restart reverse play reverse"
-    }
-  });
-});
-  
-
-
-</script>
-</div>
 <div id="dyslexia">
-    <img src="media/dyslexia-gif_1.gif" alt="Dyslexia" class="gif" id="dyslexiagif" />
-    <img src="media/atreegif.gif" alt="tree" class="gif" id="treegif" />
-    <p class="_32 TT blue" id="line26">...blurs the world I see, <br> Lines dissolve unpredictably,</p>
-    <img src="media/atreegif.gif" alt="tree" class="gif" id="treegif2" />
-    <div id="gradienttree"></div>
+    <img data-speed="0.7" src="media/dyslexia-gif_1.gif" alt="Dyslexia" class="gif" id="dyslexiagif" />
+    <img data-speed="0.9" src="media/atreegif.gif" alt="tree" class="gif" id="treegif" />
+    <p data-speed="1.5" class="_32 TT blue" id="line26">...blurs the world I see, <br> Lines dissolve unpredictably,</p>
+    <img data-speed="0.9" src="media/atreegif.gif" alt="tree" class="gif" id="treegif2" />
+    <div data-speed="0.9" id="gradienttree"></div>
     <p class="_48 TT white" id="line27">Sharp turns soft</p>
-    <p class="_32 TT blue" id="line28">and forms_________break free</p>
+    <p data-speed="1.7" class="_32 TT blue" id="line28">and forms_________break free</p>
 </div>
 
-<script>
-  gsap.from("#treegif, #treegif2", {
-    
-    
-    
-    filter: "blur(40px)",
-    
-    scrollTrigger: {
-      trigger: "#treegif, #treegif2",
-      start: "top 100%",
-      end: "bottom 80%",
-      toggleActions: "restart reverse play reverse",
-      scrub: 1
-    }
-  });
-</script>
+
 
 <div id="look">
-  <img src="media/skygif.gif" alt="Sky" class="gif" id="skygif" />
+  <img data-speed="0.9" src="media/sky1.png" alt="Sky" class="gif" id="skygif" />
 
 
   
-  <script>
-    gsap.from("#skygif", {
-    duration: 1.5,
-    ease: "easeInOut",
-    opacity: 0,
-    mixBlendMode: "normal",
-    delay: 1,
-    scrollTrigger: {
-      trigger: "#skygif",
-      start: "top 100%",
-      
-      toggleActions: "restart reverse play reverse"
-    }
-  });
-  </script>
 
 
     <p class="_32 TT blue" id="line29">Look! They <span class="MS stroked _48">dance</span> </p>
     <img src="media/Compbpdq.gif" alt="dancing" class="gif" id="dancinggif" />
-    <p class="_48 TT stroked" id="line30">cursive carousel <br><br>
+    <p data-speed="0.7" class="_48 TT stroked" id="line30">cursive carousel <br><br>
  rotating like dreams i almost remembered but
  <br><br>
 
@@ -420,8 +197,8 @@ gsap.utils.toArray("#line20, #line21, #line22, #line23, #line24, #line25").forEa
 <div id="whitegradient2"></div>
 
 <div id="concentrate">
-  <p class="_48 TT white" id="concentrateline1"> And they say:</p>
-  <p class="_48 MS white" id="concentrateline2">"Just concentrate"</p>
+  <p data-speed="0.7" class="_48 TT white" id="concentrateline1"> And they say:</p>
+  <p data-speed="0.7" class="_48 MS white" id="concentrateline2">"Just concentrate"</p>
   <img src="media/concentrategif.gif" id="concentrategif">
   <p class="_48 MS white" id="concentrateline3">Like I didn't already tie my breath</p>
   <p class="_48 MS white" id="concentrateline4">into knots</p>
@@ -432,39 +209,24 @@ gsap.utils.toArray("#line20, #line21, #line22, #line23, #line24, #line25").forEa
     <!-- <img src="ascii-art (6).png" alt="Shatter" class="gif" id="shattergif2" /> -->
     <div id="bluebg"></div>
     <img src="media/shatterimg-01.png" alt="Shatter" class="gif" id="shatterimg" />
-    <p class="_48 MS blue" id="line32">and I am picking up the alphabet <br><br> like...</p>
-    <p class="_48 MS blue" id="line33">shattered glass on linoleum.</p>
+    <p data-speed="0.7" class="_48 MS blue" id="line32">and I am picking up the alphabet <br><br> like...</p>
+    <p data-speed="0.7" class="_48 MS blue" id="line33">shattered glass on linoleum.</p>
 </div>
-<script>gsap.registerPlugin(ScrambleTextPlugin, ScrollTrigger);
 
-  gsap.from("#line32, #line33", {
-    duration: 1.5,
-    scrambleText: {
-      text: "abcdefghijklmnop:",
-      chars: "lowerCase",
-      revealDelay: 0,
-      speed: 1,
-    },
-    scrollTrigger: {
-      trigger: "#line32, #line33",
-     
-      toggleActions: "restart reverse play reverse"
-    }
-  });
-  </script>
-<div id="whitegradient3"></div>
+
+<div  id="whitegradient3"></div>
 <div id="time">
 <!-- <img src="Comp 24.gif" id="time1">
 <img src="Comp 24.gif" id="time2"> -->
-<img src="media/clock2gif.gif" id="timegif">
-<img src="media/Comp 2 (0-00-01-12).png" id="clock">
+<img  src="media/clock2gif.gif" id="timegif">
+<img data-speed="0.8" src="media/Comp 2 (0-00-01-12).png" id="clock">
 <p class="_48 MS stroked" id="line34">Clocks melt</p>
 <p class="_48 MS stroked" id="line35">and numbers twist and slide,</p>
 <p class="_48 MS stroked" id="line36">Time plays tricks I cannot guide.</p>
 <p class="_48 MS stroked" id="line37">Thirteen flips to thirty-one, <br><br> Tomorrow hides behind the sun. </p>
 <p class="_48 MS stroked" id="line38">Calendars blur, the months misalign— <br>I chase the days but lose the line.</p>
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 186.44 214.84" id="clockhand">
+<svg data-speed="0.8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 186.44 214.84" id="clockhand">
   <defs>
     <style>
       .svg-fill-white {
@@ -499,139 +261,34 @@ gsap.utils.toArray("#line20, #line21, #line22, #line23, #line24, #line25").forEa
   
 </audio>
 
-<script>
 
-  // gsap.registerPlugin(ScrambleTextPlugin, ScrollTrigger);
-
-  // gsap.from("#line32, #line33", {
-  //   duration: 1.5,
-  //   scrambleText: {
-  //     text: "abcdefghijklmnop:",
-  //     chars: "lowerCase",
-  //     revealDelay: 0,
-  //     speed: 1,
-  //   },
-  //   scrollTrigger: {
-  //     trigger: "#line32, #line33",
-     
-  //     toggleActions: "restart reverse play reverse"
-  //   }
-  // });
-  gsap.registerPlugin(Draggable);
-  
-  
-  const clockSound = document.getElementById('clockSound');
-  
-  Draggable.create("#clockhand", {
-    type: "rotation",
-    inertia: false,
-     edgeResistance: 0.65,
-     onDragStart: function() {
-      clockSound.play();
-    },
-    onDrag: function() {
-     
-      let rotation = this.rotation % 360;
-      if (rotation < 0) rotation += 360;
-      
-      
-      gsap.set("#timegif, #clock", {
-        filter: `hue-rotate(${rotation}deg)`
-      });
-    },
-      onPress: function() {
-      clockSound.play();
-      
-      gsap.to(this.target, { 
-        scale: 1.55, 
-        duration: 0.4,  
-        ease: "bounce" 
-      });
-    },
-      onRelease: function() {
-      gsap.to(this.target, { 
-        scale: 1, 
-        duration: 0.4,  
-        ease: "bounce" 
-      });
-      clockSound.pause();
-      clockSound.currentTime = 0;
-      
-    //   gsap.to(this.target, { 
-    //     scale: 1, 
-    //     duration: 0.4, 
-    //     ease: "bounce"
-    //           });
-    // gsap.set("#time1, #time2, #clock", {
-    //     filter: `hue-rotate(${rotation}deg)`
-    //   });
-    }
-  });
-</script>
 <div id="whitegradient4"></div>
 
  
+<!-- </div> -->
 </div>
-</div>
+
 
 <div id="numbers">
-   <img src="media/shakingeye.gif" id="eyegif" />
-   <img src="media/shakingeye.gif" id="eyegif2" />
-   <img src="media/shakingeye.gif" id="eyegif3" />
-   <p class="_48 MS blue" id="line38_1">1234567890 — but which came first?</p>
+   <img data-speed="0.8" src="media/shakingeye.gif" id="eyegif" />
+   <img data-speed="0.7" src="media/shakingeye.gif" id="eyegif2" />
+   <img data-speed="0.6" src="media/shakingeye.gif" id="eyegif3" />
+   <p class="_48 MS blue" id="line38_1">1234567890 - but which came first?</p>
    <p class="_48 MS blue" id="line38_2">left to right or right to left?</p>
-   <script>
-  gsap.from("#eyegif", {
-    duration: 1.5,
-    ease: "easeInOut",
-    scale: 0,
-    delay: 0.5,
-    scrollTrigger: {
-      trigger: "#eyegif",
-      start: "top 100%",
-      
-      toggleActions: "restart reverse play reverse",
-      
-    }
-  });
-
-  gsap.from("#eyegif2", {
-    duration: 1.5,
-    ease: "easeInOut",
-    scale: 0,
-    delay: 0.25,
-    scrollTrigger: {
-      trigger: "#eyegif2",
-      start: "top 100%",
-      
-      toggleActions: "restart reverse play reverse",
-      
-    }
-  });
-
-  gsap.from("#eyegif3", {
-    duration: 1.5,
-    ease: "easeInOut",
-    scale: 0,
-    delay: 0,
-    scrollTrigger: {
-      trigger: "#eyegif3",
-      start: "top 100%",
-      
-      toggleActions: "restart reverse play reverse",
-      
-    }
-  });
-</script>
+   
 </div>
-<div id="hallway"></div>
+
+<div id="hallway">
+  <div data-speed="0.7" id="whitegradient5"></div>
+</div>
 <div id="fillingblanks">
+  <div id="whitegradient6"></div>
   <p class="_32 TT white" id="line39">I miss</p>
   <p class="_32 MS white" id="line40">the games</p>
   <p class="_32 TT white" id="line41">when I was a child</p>
   <p class="_32 TT white" id="line42">filling blanks with letters.</p>
   <p class="_32 TT white" id="line43">as I fill my soul with <span class="MS _48">wonder  and light</span> that faded when rules replaced play.</p>
-   <img src="media/skygif.gif" alt="Sky" class="gif" id="skygif2" />
+   <img data-speed="0.7" src="media/sky1.png" alt="Sky" class="gif" id="skygif2" />
 
   <div id="dragNumber">
  <p class="dragNum original" id="num1">a</p>
@@ -661,7 +318,7 @@ gsap.utils.toArray("#line20, #line21, #line22, #line23, #line24, #line25").forEa
   <p class="dragNum original" id="num25">y</p>
   <p class="dragNum original" id="num26">z</p>
   
-  <!-- Copy 1 -->
+  
   <p class="dragNum copy1" id="num1-copy1">a</p>
   <p class="dragNum copy1" id="num2-copy1">b</p>
   <p class="dragNum copy1" id="num3-copy1">c</p>
@@ -800,33 +457,7 @@ gsap.utils.toArray("#line20, #line21, #line22, #line23, #line24, #line25").forEa
 
 
 
-<script>
-  gsap.registerPlugin(Draggable,ScrambleTextPlugin);
 
-  
-
-  // Second set
-  Draggable.create(".dragNum", {
-    type: "xy",
-    inertia: false,
-    edgeResistance: 0.65,
-    onPress: function() {
-      gsap.to(this.target, { scale: 4, duration: 0.4, rotation: 15, ease: "bounce" });
-      gsap.from(this.target, {
-        duration: 1.5,
-        scrambleText: {
-          
-          chars: "lowerCase",
-          revealDelay: 0,
-          speed: 1,
-        }
-      });
-    },
-    onRelease: function() {
-      gsap.to(this.target, { scale: 1, duration: 0.4, rotation: 0, ease: "bounce"});
-    }
-  });
-</script>
 
 
   
@@ -895,32 +526,12 @@ gsap.utils.toArray("#line20, #line21, #line22, #line23, #line24, #line25").forEa
 <p class="_48 MS white" id="line44">i am the mismatch in the rules you make<br><br> or maybe i’m not—just playing it differently.</p>
 <p class="_48 MS white" id="line45">i need my own way to read this game, <br><br>my own kind of mind to make it make sense.</p>
 
-<script>
 
-  gsap.registerPlugin(ScrambleTextPlugin, ScrollTrigger);
-
-  gsap.from("#line45, #line44", {
-    duration: 1,
-    scrambleText: {
-      text: "i hate people who think they know me",
-      chars: "lowerCase",
-      revealDelay: 0.5,
-      speed: 1,
-    },
-    scrollTrigger: {
-      trigger: "#line45, #line44",
-      start: "top 70%",
-      end: "top 30%",
-      scrub: 1,
-      toggleActions: "restart reverse play reverse"
-    }
-  });
-</script>
 </div>
 <div id="cubist">
   <p class="_48 TT blue" id="line46"><span id="cub1">i learn differently.</span><br><span id="cub2">i see your world</span><br><span id="cub3">like a cubist painting—</span><br><span id="cub4">everything’s there,<br>but tilted</span></p>
-  <p class="_48 MS blue" id="off">off</p>
-  <p class="_48 MS blue" id="axis">axis.</p>
+  <p data-speed="0.7" class="_48 MS blue" id="off">off</p>
+  <p data-speed="0.7" class="_48 MS blue" id="axis">axis.</p>
 </div>
 <div id="ihearmusic">
   <div id="clef">
@@ -945,72 +556,13 @@ gsap.utils.toArray("#line20, #line21, #line22, #line23, #line24, #line25").forEa
   <audio id="hover-soundF" src="media\fa-note-sound.mp3" preload="auto"></audio>
   <audio id="hover-soundA" src="media\the-sound-of-the-note-a-is-stretched.mp3" preload="auto"></audio>
 
-    <script>
-      gsap.registerPlugin(Draggable) 
-            Draggable.create(".note", {
-                    type: "xy",
-                    inertia: false,
-                        edgeResistance: 0.65,
-                    
-                    onPress: function() {
-                        gsap.to(this.target, { scale: 4, duration: 0.4, rotation: 0, ease: "bounce" });
-                    },
-                    onRelease: function() {
-                        gsap.to(this.target, { scale: 1, duration: 0.4, rotation: 0, ease: "bounce"});
-                    }
-                    });
-
-    document.getElementById('line51').addEventListener('mouseenter', function() {
-    const audio = document.getElementById('hover-soundC');
-    audio.currentTime = 0;
-    audio.play();
-});
-document.getElementById('line52').addEventListener('mouseenter', function() {
-    const audio = document.getElementById('hover-soundD');
-    audio.currentTime = 0;
-    audio.play();
-});
-document.getElementById('line53').addEventListener('mouseenter', function() {
-    const audio = document.getElementById('hover-soundE');
-    audio.currentTime = 0;
-    audio.play();
-});
-document.getElementById('line54').addEventListener('mouseenter', function() {
-    const audio = document.getElementById('hover-soundF');
-    audio.currentTime = 0;
-    audio.play();
-});
-document.getElementById('clefline1').addEventListener('mouseenter', function() {
-    const audio = document.getElementById('hover-soundA');
-    audio.currentTime = 0;
-    audio.play();
-});
-
-document.getElementById('clefline2').addEventListener('mouseenter', function() {
-    const audio = document.getElementById('hover-soundA');
-    audio.currentTime = 0;
-    audio.play();
-});
-
-document.getElementById('clefline3').addEventListener('mouseenter', function() {
-    const audio = document.getElementById('hover-soundA');
-    audio.currentTime = 0;
-    audio.play();
-});
-
-document.getElementById('clefline4').addEventListener('mouseenter', function() {
-    const audio = document.getElementById('hover-soundA');
-    audio.currentTime = 0;
-    audio.play();
-});
-  
-    </script>
+   
 
 </div>
 <div id="space">
   <p class="_48 MS blue" id="line55">i feel space in silence
 and guidance in space</p>
-<p class="_48 MS stroked" id="line56">am i supposed to see something?</p>
+<p data-speed="1.7" class="_48 MS stroked" id="line56">am i supposed to see something?</p>
 <img src="media/whitecloud.png"  id="cloud" />
 <img src="media/whitecloud.png"  id="cloud2" />
 <img src="media/butterfly.gif"  id="butterflygif" />
@@ -1018,40 +570,10 @@ and guidance in space</p>
 <p class="_32 MS blue" id="line57">you see chaos,</p>
 <p class="_32 MS blue" id="line58">i see a different kind of pattern.</p>
 
-<script>
-   gsap.to("#line55", {
-    duration: 3,
-    scrambleText: {
-      text: "i feel space in silence and guidance in space",
-      chars: "lowerCase",
-      revealDelay: 0.5,
-      speed: 1,
-    },
-    scrollTrigger: {
-      trigger: "#line55",
-     
-      toggleActions: "restart reverse play reverse"
-    }
-  });
 
-  gsap.to("#line58", {
-    duration: 2,
-    scrambleText: {
-      text: "i see a different kind of pattern.",
-      chars: "lowerCase",
-      revealDelay: 0.5,
-      speed: 1,
-    },
-    scrollTrigger: {
-      trigger: "#line58",
-     
-      toggleActions: "restart reverse play reverse"
-    }
-  });
-</script>
-<img src="media\dyslexia-gif_1.gif"  id="dyslexiagif2" />
+<img data-speed="0.7" src="media\dyslexia-gif_1.gif"  id="dyslexiagif2" />
 <!-- <img src="media\dyslexia-gif_1.gif"  id="dyslexiagif3" /> -->
-<img src="media\skygif.gif"  id="skygif3" />
+<img src="media\sky1.png"  id="skygif3" />
 <img src="media\butterfly.gif"  id="butterflygif2" />
 <p class="_48 MS stroked drag" id="line59">isn't a flaw</p>
 <p class="_48 MS stroked drag" id="line60">just a wild lens</p>
@@ -1073,22 +595,11 @@ and guidance in space</p>
 <p class="_96 TT stroked drag" id="line76">s</p>
 <p class="_32 MS stroked drag" id="line77">just because you see it, doesn’t mean that it is right</p>
 <p class="_32 MS stroked drag" id="line78">who are you, to tell me, how i should see the world?</p>
+<div id="whitegradient7"></div>
+<div id="whitegradient8"></div>
 
-<script>
-     gsap.registerPlugin(Draggable) 
-            Draggable.create(".drag", {
-                    type: "xy",
-                    inertia: false,
-                        edgeResistance: 0.65,
-                    
-                    onPress: function() {
-                        gsap.to(this.target, { scale: 2.5, duration: 0.4, rotation: 0, ease: "bounce" });
-                    },
-                    onRelease: function() {
-                        gsap.to(this.target, { scale: 1, duration: 0.4, rotation: 0, ease: "bounce"});
-                    }
-                    });
-</script>
+
+
 <div id="lensline1"></div>
 <div id="lensline2"></div>
 </div>
@@ -1096,6 +607,8 @@ and guidance in space</p>
   
 </div>
 </div>
+</div>
+
 
 </body>
 </html>
